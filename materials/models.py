@@ -19,6 +19,7 @@ class Course(models.Model):
         verbose_name = "Курс"
         verbose_name_plural = "Курсы"
 
+
 class Lesson(models.Model):
     title = models.CharField(max_length=100, verbose_name="Название урока")
     description = models.TextField(
@@ -27,9 +28,7 @@ class Lesson(models.Model):
     image = models.ImageField(
         upload_to="materials/photo", verbose_name="картинка", **NULLABLE
     )
-    url = models.URLField(
-        max_length=128, db_index=True, unique=True, **NULLABLE
-    )
+    url = models.URLField(max_length=128, db_index=True, unique=True, **NULLABLE)
     course = models.ForeignKey(
         Course,
         on_delete=models.SET_NULL,
