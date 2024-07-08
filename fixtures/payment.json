@@ -1,0 +1,62 @@
+[
+  {
+    "model": "users.payment",
+    "pk": 3,
+    "fields": {
+      "payer": 1,
+      "date_payment": "2024-07-07T19:55:34.686Z",
+      "course": 2,
+      "lesson": null,
+      "amount_paid": 10000.0,
+      "transfer_method": "наличный"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 4,
+    "fields": {
+      "payer": 2,
+      "date_payment": "2024-07-07T19:55:34.698Z",
+      "course": null,
+      "lesson": 3,
+      "amount_paid": 15000.0,
+      "transfer_method": "безналичный"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 5,
+    "fields": {
+      "payer": 2,
+      "date_payment": "2024-07-08T15:01:19.791Z",
+      "course": 3,
+      "lesson": null,
+      "amount_paid": 70000.0,
+      "transfer_method": "безналичный"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 6,
+    "fields": {
+      "payer": 1,
+      "date_payment": "2024-07-08T15:01:23.458Z",
+      "course": null,
+      "lesson": 2,
+      "amount_paid": 1500.0,
+      "transfer_method": "безналичный"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 7,
+    "fields": {
+      "payer": 1,
+      "date_payment": "2024-07-08T15:01:23.467Z",
+      "course": null,
+      "lesson": 3,
+      "amount_paid": 150000.0,
+      "transfer_method": "наличный"
+    }
+  }
+]
