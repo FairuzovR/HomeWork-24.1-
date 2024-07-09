@@ -1,0 +1,35 @@
+[
+  {
+    "model": "materials.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "python",
+      "description": "It is a programming language that is used in various fields",
+      "image": "",
+      "url": "https://devpractice.ru/python-lessons/",
+      "course": 2
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "python",
+      "description": "It С++",
+      "image": "",
+      "url": null,
+      "course": 2
+    }
+  },
+  {
+    "model": "materials.lesson",
+    "pk": 3,
+    "fields": {
+      "title": "HTML",
+      "description": "It HTML",
+      "image": "",
+      "url": null,
+      "course": 3
+    }
+  }
+]

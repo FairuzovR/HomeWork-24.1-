@@ -53,7 +53,7 @@ class Payment(models.Model):
         max_length=50, **NULLABLE, verbose_name="способ оплаты")
 
     def __str__(self):
-        return f"{self.user} - {self.paid_lesson if self.paid_lesson else self.paid_course}: {self.amount}"
+        return f"{self.payer} - {self.lesson if self.lesson else self.course}: {self.amount_paid}"
     class Meta:
         verbose_name = "Платеж"
         verbose_name_plural = "Платежи"

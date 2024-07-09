@@ -1,0 +1,20 @@
+[
+  {
+    "model": "materials.course",
+    "pk": 2,
+    "fields": {
+      "title": "backend developers",
+      "description": "Creates the internal logic of the program",
+      "image": ""
+    }
+  },
+  {
+    "model": "materials.course",
+    "pk": 3,
+    "fields": {
+      "title": "frontend developer",
+      "description": "Creating the external part of the project",
+      "image": ""
+    }
+  }
+]
