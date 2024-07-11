@@ -7,7 +7,8 @@
       "description": "It is a programming language that is used in various fields",
       "image": "",
       "url": "https://devpractice.ru/python-lessons/",
-      "course": 2
+      "course": 2,
+      "owner": null
     }
   },
   {
@@ -18,18 +19,20 @@
       "description": "It С++",
       "image": "",
       "url": null,
-      "course": 2
+      "course": 2,
+      "owner": null
     }
   },
   {
     "model": "materials.lesson",
     "pk": 3,
     "fields": {
-      "title": "HTML",
+      "title": "HTML!!!",
       "description": "It HTML",
       "image": "",
       "url": null,
-      "course": 3
+      "course": 3,
+      "owner": null
     }
   }
 ]
