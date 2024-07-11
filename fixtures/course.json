@@ -3,9 +3,10 @@
     "model": "materials.course",
     "pk": 2,
     "fields": {
-      "title": "backend developers",
+      "title": "backend developers!",
       "description": "Creates the internal logic of the program",
-      "image": ""
+      "image": "",
+      "owner": null
     }
   },
   {
@@ -14,7 +15,18 @@
     "fields": {
       "title": "frontend developer",
       "description": "Creating the external part of the project",
-      "image": ""
+      "image": "",
+      "owner": null
+    }
+  },
+  {
+    "model": "materials.course",
+    "pk": 4,
+    "fields": {
+      "title": "frontend developer!!!",
+      "description": "test",
+      "image": "",
+      "owner": 5
     }
   }
 ]
