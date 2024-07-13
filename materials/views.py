@@ -2,17 +2,20 @@ from rest_framework.generics import (CreateAPIView, DestroyAPIView,
                                      ListAPIView, RetrieveAPIView,
                                      UpdateAPIView)
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.response import Response
 
 from materials.models import Course, Lesson, Subscription
 from materials.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer
-from rest_framework.response import Response
+from materials.paginators import StudyPagination
 from users.permissions import IsModerator, IsUser
+
 from django.shortcuts import get_object_or_404
 
 
 class CourseViewSet(ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    pagination_class = StudyPagination
 
     def get_permissions(self):
         if self.action == "create":
@@ -49,6 +52,7 @@ class LessonCreateApiView(CreateAPIView):
 class LessonListAPIView(ListAPIView):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
+    pagination_class = StudyPagination
     permission_classes = [IsModerator | IsUser]
 
     def get_queryset(self):
