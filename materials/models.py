@@ -13,8 +13,13 @@ class Course(models.Model):
     image = models.ImageField(
         upload_to="materials/photo", verbose_name="картинка", **NULLABLE
     )
-    owner = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE,
-                              verbose_name="владелец")
+    owner = models.ForeignKey(
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        **NULLABLE,
+        verbose_name="владелец",
+    )
+    amount = models.PositiveIntegerField(verbose_name="стоимость курса", **NULLABLE)
 
     def __str__(self):
         return self.title
@@ -38,10 +43,15 @@ class Lesson(models.Model):
         on_delete=models.SET_NULL,
         verbose_name="Курс",
         related_name="lessons",
-        **NULLABLE
+        **NULLABLE,
     )
-    owner = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE,
-                              verbose_name="владелец")
+    owner = models.ForeignKey(
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        **NULLABLE,
+        verbose_name="владелец",
+    )
+    amount = models.PositiveIntegerField(verbose_name="стоимость урока", **NULLABLE)
 
     def __str__(self):
         return self.title
@@ -50,10 +60,16 @@ class Lesson(models.Model):
         verbose_name = "Урок"
         verbose_name_plural = "Уроки"
 
+
 class Subscription(models.Model):
-    user = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE,
-                              verbose_name="подписчики")
+    user = models.ForeignKey(
+        to=settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        **NULLABLE,
+        verbose_name="подписчики",
+    )
     course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name="курс")
+
     def __str__(self):
         return f"{self.user} - {self.course}"
 
