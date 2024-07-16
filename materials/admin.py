@@ -1,8 +1,18 @@
 from django.contrib import admin
 
-from users.models import User
+from materials.models import Course, Lesson
 
 
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = ( 'id', 'email',)
+
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "title",
+    )
+@admin.register(Lesson)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "title",
+    )

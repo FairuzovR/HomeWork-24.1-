@@ -6,9 +6,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         user_list = [
-            {'email': 'farik@gmail.com'},
-            {'email': 'farik1@gmail.com'},
+            {"email": "farik@gmail.com"},
+            {"email": "farik1@gmail.com"},
         ]
 
         for user_data in user_list:
-            User.objects.createuser(email=user_data['email'])
+            User.objects.createuser(email=user_data["email"])
