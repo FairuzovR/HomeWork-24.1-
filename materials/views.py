@@ -15,6 +15,7 @@ from materials.serializers import (
     SubscriptionSerializer,
 )
 from materials.paginators import StudyPagination
+from materials.tasks import send_email
 from users.permissions import IsModerator, IsUser
 
 from django.shortcuts import get_object_or_404
@@ -62,6 +63,11 @@ class LessonCreateApiView(CreateAPIView):
         lesson.owner = self.request.user
         lesson.save()
 
+    def perform_create(self, serializer):
+        lesson = serializer.save()
+        lesson.owner = self.request.user
+        send_email.delay(lesson.course.pk)
+        lesson.save()
 
 class LessonListAPIView(ListAPIView):
     """
